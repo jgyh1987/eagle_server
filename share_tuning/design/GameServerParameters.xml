@@ -1,0 +1,13 @@
+﻿
+<?xml version="1.0" encoding="UTF-8"?>  
+<!--游戏参数 -->
+<GameParameters>
+
+	<!--服务器隔日更新时间 相对于凌晨的秒数-->
+	<ServerUpdateDelay>32400</ServerUpdateDelay>
+	
+	<!--初始金币-->
+	<InitGold>100000</InitGold>
+
+
+</GameParameters>
