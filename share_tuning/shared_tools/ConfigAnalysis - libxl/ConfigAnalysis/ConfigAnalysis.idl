@@ -1,0 +1,29 @@
+// ConfigAnalysis.idl : ConfigAnalysis.exe 的类型库源
+
+// 此文件将由 MIDL 编译器处理以产生
+// 类型库(ConfigAnalysis.tlb)。
+
+[ uuid(409C1D7C-09C6-4293-82F6-66B9A94A54C5), version(1.0) ]
+library ConfigAnalysis
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  CConfigAnalysisDoc 的主调度接口
+	
+	[ uuid(599B5B7F-0CD6-485C-B0F3-09F9C07BB47A) ]
+	dispinterface IConfigAnalysis
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  CConfigAnalysisDoc 的类信息
+	
+	[ uuid(F9E85656-F94A-4D9C-B0A6-7C9ABE833C87) ]
+	coclass ConfigAnalysis
+	{
+		[default] dispinterface IConfigAnalysis;
+	};
+};
