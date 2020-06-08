@@ -1,0 +1,22 @@
+package protobuf.serialize;
+
+message ServerInfo
+{
+	required string ip = 1;
+	required uint32 port = 2;
+	required string areaName = 3;
+	required string serverName = 4;
+	required uint32 status = 5;
+}
+
+message ServerInfo2
+{
+	required uint32 status = 1;
+	required uint32 port = 2;
+}
+
+message ServerInfoArray
+{
+	repeated ServerInfo serverList = 1;
+}
+

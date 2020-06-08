@@ -1,0 +1,29 @@
+// Analysis.idl : Analysis.exe 的类型库源
+
+// 此文件将由 MIDL 编译器处理以产生
+// 类型库(Analysis.tlb)。
+
+[ uuid(2AC935DC-54DD-4004-A80D-07FBE272911F), version(1.0) ]
+library Analysis
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  CAnalysisDoc 的主调度接口
+	
+	[ uuid(273DFD09-CC31-4768-8DD6-E61A48FA9916) ]
+	dispinterface IAnalysis
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  CAnalysisDoc 的类信息
+	
+	[ uuid(6219EA9B-E899-4A4A-9F89-C70C6FCBDCBB) ]
+	coclass Analysis
+	{
+		[default] dispinterface IAnalysis;
+	};
+};
