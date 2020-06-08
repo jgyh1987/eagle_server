@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package protobuf.serialize;
+
+message ServerInfo
+{
+	string ip = 1;
+	uint32 port = 2;
+	string areaName = 3;
+	string serverName = 4;
+	uint32 status = 5;
+}
+
+message ServerInfo2
+{
+	uint32 status = 1;
+	uint32 port = 2;
+}
+
+message ServerInfoArray
+{
+	ServerInfo serverList = 1;
+}
+

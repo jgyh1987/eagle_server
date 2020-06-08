@@ -1,0 +1,263 @@
+#!/usr/bin/python2.4
+import os,re,sys
+
+installFile = "install.sql"
+initFile = "init.sql"
+alterFile = "alter.sql"
+logFile = "install_log.sql"
+aiFile = "ai.sql"
+armyFile = "resetarmy.sql"
+petFile = "pet.sql"
+jjcFile = "jjc.sql"
+chargeFile = "install_chargelog.sql"
+
+help = "help: \n" + "install : install database\n" + "serverlist : init serverList table\n" + "init : install + serverlist\n"
+
+game_database = ["localhost", "xuyaolan", "1234", "xuyaolan"]
+log_database = ["localhost", "xuyaolan", "1234", "xuyaolan_log"]
+game_server = [game_database]
+log_server = [log_database]
+
+def dropMark(str):
+    str=re.sub("#.*\n", "", str)
+    str=re.sub("--.*\n", "", str)
+    str=re.sub("/\*.*\*/", "", str)
+    return str
+#-----------
+def doCmd(str):
+    str = dropMark(str)
+    str = str.replace("\n", "")
+    str = str.replace("\t", "")
+    str = str.replace("`", "")
+    splitcmd=str.split(";")
+    for zone in game_server:
+        for index in range(len(zone)):
+            if(index<3) : continue
+            for sql in splitcmd:
+                 if(sql == "" or sql.isspace()):continue
+               #  print sql
+                 cmd = 'mysql -u'+zone[1] +' -p' +zone[2] + ' -h' +zone[0] + ' -e '+'\"' + ' use ' + zone[index] + ';' + sql +";" + '\"'
+                 print cmd
+                 os.system(cmd)
+                 print "\n"
+
+#-----------
+def doLogCmd(str):
+    str = dropMark(str)
+    str = str.replace("\n", "")
+    str = str.replace("\t", "")
+    str = str.replace("`", "")
+    splitcmd=str.split(";")
+    for zone in log_server:
+        for index in range(len(zone)):
+            if(index<3) : continue
+            for sql in splitcmd:
+                 if(sql == "" or sql.isspace()):continue
+               #  print sql
+                 cmd = 'mysql -u'+zone[1] +' -p' +zone[2] + ' -h' +zone[0] + ' -e '+'\"' + ' use ' + zone[index] + ';' + sql +";" + '\"'
+                 print cmd
+                 os.system(cmd)
+                 print "\n"
+
+#-----
+def doAICmd(str):
+    str = dropMark(str)
+    str = str.replace("\n", "")
+    str = str.replace("\t", "")
+    str = str.replace("`", "")
+    splitcmd=str.split("####")
+    for zone in game_server:
+        for index in range(len(zone)):
+            if(index<3) : continue
+            for sql in splitcmd:
+                 if(sql == "" or sql.isspace()):continue
+                 cmd = 'mysql -u'+zone[1] +' -p' +zone[2] + ' -h' +zone[0] + ' -e '+'\"' + ' use ' + zone[index] + ';' + sql +";" + '\"'
+                 print cmd
+                 os.system(cmd)
+                 print "\n"
+#-----
+def doAICmdDirect():
+    for zone in game_server:
+        for index in range(len(zone)):
+            if(index<3) : continue
+            else:
+                cmd = 'mysql -u'+zone[1] +' -p' +zone[2] + ' -h' +zone[0] + ' -e '+'\"' + ' use ' + zone[index] + ';' + "source ai.sql" +";" + '\"'
+                print cmd
+                os.system(cmd)
+                print "\n"
+#-----
+def installDataBase():
+    update = open(installFile, "r")
+    text = ""
+    for line in update:
+        if(line.find(";") != -1):
+            text += line
+        else:
+            text += line
+    doCmd(text)
+    text = ""
+#----
+def doFileSql( file ):
+    update = open(file, "r")
+    text = ""
+    for line in update:
+        if(line.find(";") != -1):
+            text += line
+        else:
+            text += line
+    doCmd(text)
+    text = ""
+#-----
+def serverListSql():
+    serverlist = open(initFile, "r")
+    text = ""
+    for line in serverlist:
+        if(line.find(";") != -1):text+=line
+        else:text += line
+    doCmd(text)
+    text=""
+#----
+def alterSql():
+    alter = open(alterFile, "r")
+    text = ""
+    for line in alter:
+        if(line.find("#") != -1):continue
+        if(line.find(";") != -1):text+=line
+        else:text += line
+    doCmd(text)
+    text=""
+#----
+def logSql():
+    log = open(logFile, "r")
+    text = ""
+    for line in log:
+        if(line.find(";") != -1):text+=line
+        else:text += line
+    doLogCmd(text)
+    text=""
+#----
+def chargeLogSql():
+    log = open(chargeFile, "r")
+    text = ""
+    for line in log:
+        if(line.find(";") != -1):text+=line
+        else:text += line
+    doCmd(text)
+    text=""
+#----
+def resetArmySql():
+    log = open(armyFile, "r")
+    text = ""
+    for line in log:
+        if(line.find(";") != -1):text+=line
+        else:text += line
+    doCmd(text)
+    text=""
+#----
+def resetPetSql():
+    log = open(petFile, "r")
+    text = ""
+    for line in log:
+        if(line.find(";") != -1):text+=line
+        else:text += line
+    doCmd(text)
+    text=""
+#------
+def resetJJCSql():
+    log = open(jjcFile, "r")
+    text = ""
+    for line in log:
+        if(line.find(";") != -1):text+=line
+        else:text += line
+    doCmd(text)
+    text=""
+#------
+def aiSql():
+    log = open(aiFile, "r")
+    text = ""
+    hasdelemiter = 0
+    for line in log:
+        if(line.find("#") != -1):continue;
+        if(line.find("delimiter") != -1):
+            if(hasdelemiter == 0):
+                hasdelemiter = 1
+                text += "####\n"
+                text += line
+                text += "\n"
+            else:
+                hasdelemiter = 0
+                text += line
+                text += "####\n"
+        else:
+            if(hasdelemiter == 0):
+                text += line
+                text += "####\n"
+            else:
+                if(line.find(";") != -1):
+                    text += line
+                else:
+                    text += "\n"
+                    text += line
+
+#    print text
+    #doAICmd(text)
+    text=""
+    cmd = 'mysql -u'+"xuyaolan" +' -p' +"1234" + ' -h' +"localhost" + ' -e '+'\"' + ' use ' + "xuyaolan" + ';' + "source ai.sql" +";" + '\"'
+    os.system(cmd)
+#------
+def displayTable():
+    update = open(installFile, "r")
+    all = 0
+    text = ""
+    for line in update:
+        text += line
+        if(line.find(";") != -1):
+            print text
+            text = ""
+
+#        if(line.find("CREATE") != -1):
+ ##           if(line.find("TABLE") != -1):
+   #             print line
+    #            all = all + 1
+    print all
+
+#----
+
+if __name__ == "__main__":
+    #if len(sys.argv) != 2 or len(sys.argv) != 3:
+     #   print help
+    if sys.argv[1] == "install":
+        installDataBase()
+    elif sys.argv[1] == "serverlist":
+        serverListSql()
+    elif sys.argv[1] == "init":
+        installDataBase()
+        logSql()
+        serverListSql()
+        chargeLogSql()
+        #alterSql()
+        doAICmdDirect()
+    elif sys.argv[1] == "alter":
+        alterSql()
+    elif sys.argv[1] == "log":
+        logSql()
+    elif sys.argv[1] == "display":
+        displayTable()
+    elif sys.argv[1] == "ai":
+        #aiSql()
+        doAICmdDirect()
+    elif sys.argv[1] == "army":
+        resetArmySql()
+        alterSql()
+    elif sys.argv[1] == "pet":
+        resetPetSql()
+    elif sys.argv[1] == "jjc":
+        resetJJCSql()
+    elif sys.argv[1] == "charge":
+        chargeLogSql()
+    elif sys.argv[1] == "-f":
+        if len(sys.argv) == 3:
+            doFileSql( sys.argv[2] )
+    else:
+        print help
+

@@ -1,0 +1,9 @@
+syntax = "proto2";
+package protocol;
+
+// 基础网络数据包，不允许轻易修改
+message PackageNet{
+	required int32 id = 1; //协议ID	
+	required bytes body = 2; //协议内容，一个proto序列化的二进制数据
+	optional string sign = 3; //签名校验
+}

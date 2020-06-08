@@ -1,0 +1,377 @@
+syntax = "proto2"; //指定版本信息
+package protocol;
+
+// 字段说明
+// repeated  --- 数组
+// [default="value"]  默认值
+
+enum NetMsgID {
+
+    // 客户端发送给服务端消息id使用cs_开头, 数值采用奇数结尾, 后跟首字母小写驼峰, 以ReqNet结尾
+    // 服务端发送给客户端消息id使用sc_开头，数值采用偶数结尾，后跟首字母小写驼峰, 以RspNet结尾
+	
+ /////////////////////////////////////////////////////////////////////////////////////////////////
+
+	//login msg begin id 1000 + x
+
+	//登陆协议 id 1xxx 
+   NetMsgID_none = 0;
+	
+	 // 心跳
+    cs_heartBeat = 1001; //Uint32Net
+    sc_heartBeat = 1002; //Uint64Net
+
+    // 登录账号服务器
+    cs_login = 1003;		//LoginReqNet
+    sc_login = 1004;		//LoginRspNet
+	
+	 // 选择游戏服务器
+    cs_selectGameServer = 1005;	//SelectGameServerReqNet
+    sc_selectGameServer = 1006;	//SelectGameServerRspNet
+
+    // 登录游戏服务器
+    cs_loginGame = 1007;	//LoginGameReqNet
+    sc_loginGame = 1008;	//LoginGameRspNet
+	
+	// 创建角色
+    cs_createRole = 1009;	//CreateRoleReqNet
+    sc_createRole = 1010;	//CreateRoleRspNet
+
+	  // 进入游戏场景
+    cs_enterScene = 1011;	//EnterSceneReqNet
+    sc_enterScene = 1012;	//EnterSceneRspNet
+		    
+	//统一错误通知
+      sc_errorNotify = 1018;	//ErrorNotifyNet
+
+	  	//UDP测试登陆
+      cs_udpLogin = 1019;	//UpdLoginReqNet
+	   sc_udpLogin = 1020;	//UpdLoginRspNet
+
+	   //UDP测试
+      cs_udpTest = 1021;	//UpdTestReqNet
+	   sc_udpTest = 1022;	//UpdTestRspNet
+
+	     //增加角色槽位
+      cs_buyRoleSolt = 1023;	//BuyRoleSoltReqNet
+	   sc_buyRoleSolt = 1024;	//BuyRoleSoltRspNet
+
+	   //login msg end id 1000 + x
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////
+
+	     //player msg begin id 2000 + x
+
+	//完整道具背包信息通知
+	 cs_itemBagNotify = 2003;	//ItemBagReqNet
+      sc_itemBagNotify = 2004;	//ItemBagNotifyNet
+	  
+	//完整装备背包信息通知
+	 cs_equipBagNotify = 2005;	//EquipBagReqNet
+      sc_equipBagNotify = 2006;	//EquipBagNotifyNet
+
+	  //道具信息通知
+      sc_itemChangeNotify = 2008;	//ItemChangeNotifyNet
+
+	  //装备信息通知
+      sc_equipChangeNotify = 2010;	//EquipChangeNotifyNet
+
+	    //购买背包槽位
+      cs_buyBagSolt = 2011;	//BuyBagSoltReqNet
+	   sc_buyBagSolt = 2012;	//BuyBagSoltRspNet
+
+	   //player msg end id 2000 + x
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+	  //chat msg begin id 3000 + x
+
+	     //GM CMD
+		cs_GMCMD = 3001;	//GMCMDReqNet
+	   sc_GMCMD = 3002;	//GMCMDRspNet
+
+	   //chat msg end id 3000 + x
+
+ /////////////////////////////////////////////////////////////////////////////////////////////////
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// 通用结构体 begin
+// string
+message StringNet {
+    required string value = 1; // 字符串
+}
+
+// uint32
+message Uint32Net {
+    required uint32 value = 1; // uint32
+}
+
+// uint32List
+message Uint32ListNet {
+    repeated uint32 valueList = 1; // uint32List
+}
+
+// uint64
+message Uint64Net {
+    required uint64 value = 1; // uint64
+}
+
+// 双整型
+message DoubleInt32Net {
+    required int32 key = 1; // key
+    required int32 value = 2; //value
+}
+
+// 双整型
+message DoubleUint64Net {
+    required uint64 key = 1; // key
+    required uint64 value = 2; //value
+}
+
+// server info
+message ServerInfo {
+   required string serverIp = 1; // 服务器连接Ip
+	required int32  serverPort = 2;	//服务器端口
+	optional int32 serverId = 3;
+}
+
+//MapPos
+message MapPos {
+    required int64 x = 1; //实际坐标 * 1000
+    required int64 y = 2; //实际坐标 * 1000
+	 required int64 z = 3; //实际坐标 * 1000
+}
+
+//player base info
+message PlayerBaseInfo {
+    required int64 playerId = 1; // 
+    required int32 diamond = 2; //
+	required int32 vipLevel = 3;	//
+}
+
+//role base info
+message RoleBaseInfo {
+    required int64 roleId = 1; // 角色Id
+    required int32 jobId = 2; //角色职业
+	required int32 sex = 3;	// 角色性别
+	required string name = 4; 	//角色名字
+	required int32 level = 5;	//等级
+	optional EquipInfo equips = 6;//装备基础信息
+	required int32 mainCityId = 7;//
+}
+
+//item base info
+message ItemBaseInfo{
+	required int32 itemType = 1;	//1 道具 2 装备 3货币
+	required int64 id = 2;//item 表ID
+	 required int64 count = 3; //
+	 required int64  uid = 4;
+}
+
+//item info
+message ItemInfo{
+	required ItemBaseInfo baseInfo = 1;
+}
+
+message ItemChangeInfo{
+	required ItemInfo info = 1;
+	required int32 change = 2;//	1 新增 2 增加 3 减少 4 删除 5 移动 6 更新
+}
+
+//item bag
+message ItemBag{
+	repeated ItemInfo infos = 1;
+	required int32 consumptionsBag = 2;
+	required int32 materialsBag = 3;
+	required int32 questsBag = 4;
+}
+
+//equip base info
+message EquipBaseInfo{
+	required int64 id = 1;//equip 表ID
+	required int64  uid = 2;
+}
+
+
+//equip info
+message EquipInfo{
+	required EquipBaseInfo baseInfo = 1;//基础信息
+}
+
+message EquipChangeInfo{
+	required EquipInfo info = 1;
+	required int32 change = 2;//		1 新增 2 增加 3 减少 4 删除 5 移动 6 更新
+}
+
+//equip bag
+message EquipBag{
+	repeated EquipInfo infos = 1;
+	required int32 bag = 2;//背包最大格子数
+}
+
+//role info
+message RoleInfo {
+    required RoleBaseInfo baseInfo = 1;//基础信息
+	required int64 money = 2;	//金币
+	required int64 exp = 3;//经验
+	required MapPos pos=5;	//坐标
+	optional int32 skillPoint = 6;//技能点
+	optional int32 energy = 7;//体力
+
+}
+
+// 通用结构体 end
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 登录账号请求
+message LoginReqNet {
+    optional string channelId = 1; // 渠道id，标识客户端包对应的渠道
+    required string uid = 2; // 内部登录帐号名或sdk返回的uid
+    optional string sdkToken = 3; // sdk登录返回的token
+    optional string sdkSession = 4; // sdk登录返回的session
+    required int32 loginType = 5; // 登录方式，同个渠道可能存在多个登录方式，如QQ 或 微信登录
+    optional int32 version = 6; // 协议版本号
+    optional int32 runtime = 7; // 运行平台 0:未定义 1. pc-web 2. android-web 3. ios-web 4. android-app 5.ios-app
+    optional string deviceId = 8; // 设备id
+}
+
+// 登录账号返回
+message LoginRspNet {
+    required string account = 1; // 服务器修改过的真实账号
+	required int32 ret = 2;
+}
+
+// 选择游戏服务器请求
+message SelectGameServerReqNet {
+    required int32 gameServerId = 1; // 游戏服务器ID
+}
+
+// 选择游戏服务器返回
+message SelectGameServerRspNet {
+	required ServerInfo server = 1; // 返回gateway服务器 TCP端口
+	optional ServerInfo udpserver = 2;//返回gateway服务器 UDP端口
+    required string gameToken = 3; // 游戏服务器令牌
+	required int32 ret = 4;		//
+}
+
+// 登录游戏请求
+message LoginGameReqNet {
+    required string gameToken = 1; // 游戏服务器令牌
+    required string account = 2; // 服务器修改过的真实账号
+}
+
+// 登录游戏返回
+message LoginGameRspNet {
+	required int32 ret = 1;
+	optional PlayerBaseInfo player = 2;
+	repeated RoleBaseInfo roles = 3;
+	required int32 soltCount = 4; // 
+}
+
+// 创建角色请求
+message CreateRoleReqNet {
+    required string name = 1; // 角色名字
+    required int32 jobId = 2; // 角色职业
+	required int32 sex = 3;	//角色性别
+}
+
+// 创建角色返回
+message CreateRoleRspNet {
+	required int32 ret = 1;
+	required RoleBaseInfo role = 2;
+}
+
+// 进入游戏场景请求
+message EnterSceneReqNet {
+    required int64 roleId = 1; // 
+}
+
+// 进入游戏场景返回
+message EnterSceneRspNet {
+	required int32 ret = 1;
+	optional RoleInfo roleInfo = 2;
+}
+
+// 完整道具背包通知
+message BagNotifyNet {
+	required ItemBag bag = 1;
+}
+
+// 完整装备背包通知
+message EquipBagNotifyNet {
+	required EquipBag bag = 1;
+}
+
+// 统一错误通知
+message ErrorNotifyNet {
+	required int32 err = 1;
+}
+
+// 测试登陆
+message UpdLoginReqNet {
+    required int32 id = 1;
+	required int64 playerId = 2;
+}
+
+// 测试登陆返回
+message UpdLoginRspNet {
+	required int32 kcpId = 1;
+	 required int32 id = 2;
+}
+
+// UDP
+message UpdTestReqNet {
+    required int32 dataId = 1; // 
+}
+
+// UDP返回
+message UpdTestRspNet {
+	required int32 dataId = 1; // 
+}
+
+// 增加角色槽位
+message BuyRoleSoltReqNet {
+   
+}
+
+// 增加角色槽位返回
+message BuyRoleSoltRspNet {
+	required int32 soltCount = 1; // 
+	required int32 ret = 2;
+}
+ 
+ // GM CMD
+message GMCMDReqNet {
+   required string cmd = 1;
+}
+
+// GM CMD
+message GMCMDRspNet {
+	required string ret = 1;
+}
+
+// 道具信息通知
+message ItemChangeNotifyNet {
+	repeated ItemChangeInfo infos = 1;
+}
+
+// 装备信息通知
+message EquipChangeNotifyNet {
+	repeated EquipChangeInfo infos = 1;
+}
+
+// 购买背包槽位
+message BuyBagSoltReqNet {
+   
+}
+
+// 购买背包槽位返回
+message BuyBagSoltRspNet {
+	required int32 ret = 1;
+	required int32 consumptionsBag = 2;
+	required int32 materialsBag = 3;
+	required int32 questsBag = 4;
+	required int32 equipsBag = 5;
+}

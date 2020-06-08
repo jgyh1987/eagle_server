@@ -1,0 +1,22 @@
+$cfile "ScriptFunc.h"
+$#include "LuaInit.h"
+$#include "ActivityLuaInit.h"
+
+class ScriptLogicPlayer : public ScriptProxy
+{ 
+public:
+    ~ScriptLogicPlayer();
+    unsigned long long GetID();
+    void SendMail(char *title, char *content);
+
+};
+
+class ScriptPollActivity : public ScriptProxy
+{ 
+public:
+    ~ScriptPollActivity();
+    void TestFun1(int num);
+    
+
+};
+
