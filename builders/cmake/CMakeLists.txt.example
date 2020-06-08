@@ -1,0 +1,87 @@
+SET(CMAKE_BUILD_TYPE Debug)
+
+MESSAGE(STATUS "builder srcdir" ${PROJECT_SOURCE_DIR}" binarydir" ${PROJECT_BINARY_DIR})
+MESSAGE(STATUS "SPECIAL_MACRO= $ENV{SPECIAL_MACRO}")
+MESSAGE(STATUS "C_INCLUDE_PATH = $ENV{C_INCLUDE_PATH}")
+MESSAGE(STATUS "CPLUS_INCLUDE_PATH = $ENV{CPLUS_INCLUDE_PATH}")
+
+SET(DEFINITIONS $ENV{SPECIAL_MACRO} -DEXT_BUILD -D__linux__ -D_DEBUG)
+ADD_DEFINITIONS(${DEFINITIONS})
+
+#SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g -W -Wno-sign-compare ")
+#SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wunused-variable -Wunused-parameter -Wunused-function -Wunused -Wno-deprecated -Woverloaded-virtual -Wwrite-strings -Winvalid-pch -Wno-sign-compare -fno-exceptions  -fno-rtti -Winvalid-pch -Weffc++")
+#SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O0 -g -Wfatal-errors -Wchar-subscripts -Wformat -Wimplicit -Wmissing-braces -Wparentheses -Wsequence-point -Wswitch -Wunused -Wuninitialized -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wsign-compare")
+#SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -o2 -Wall -gdwarf-2 -gstrict-dwarf -Wfatal-errors -Wchar-subscripts -Wformat -Wreturn-type -Wno-deprecated")
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -o2 -g -gstabs+ -Wall -Wfatal-errors -Wchar-subscripts -Wformat -Wreturn-type -Wno-deprecated -std=c++11")
+SET(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS}")
+
+SET(CMAKE_EXE_LINKER_FLAGS "-Wl,--hash-style=sysv -lpthread -lrt -lidn -lcrypto")
+
+FIND_PROGRAM(PROTOBUFF_BIN protoc ../../tools/linux_protobuf/bin NO_DEFAULT_PATH)
+
+FIND_PATH(PROTOBUF_INC google/protobuf/message_lite.h ../../tools/linux_protobuf/include NO_DEFAULT_PATH)
+FIND_PATH(MYSQL_INC mysql.h /usr/local/mysql/include NO_DEFAULT_PATH)
+FIND_PATH(MYSQLPP_INC mysql++.h ../../tools/linux_mysql++/include/mysql++ NO_DEFAULT_PATH)
+FIND_PATH(JSON_INC jsoncpp/include/json.h ../../tools NO_DEFAULT_PATH)
+FIND_PATH(UV_INC uv.h ../../tools/linux_libuv/include NO_DEFAULT_PATH)
+FIND_PATH(LUA_INC lua.h ../../tools/linux_lua/include NO_DEFAULT_PATH)
+FIND_PATH(TOLUA_INC tolua++.h ../../tools/linux_tolua/include NO_DEFAULT_PATH)
+FIND_PATH(CURL_INC curl/curl.h ../../tools/libcurl/include NO_DEFAULT_PATH)
+
+FIND_LIBRARY(PROTOBUF_LIB libprotobuf.a ../../tools/linux_protobuf/lib NO_DEFAULT_PATH)
+FIND_LIBRARY(MYSQL_LIB libmysqlclient.so /usr/local/mysql/lib NO_DEFAULT_PATH)
+FIND_LIBRARY(MYSQLPP_LIB libmysqlpp.so ../../tools/linux_mysql++/lib NO_DEFAULT_PATH)
+FIND_LIBRARY(JSON_LIB libjson.a ../../tools/jsoncpp/lib NO_DEFAULT_PATH)
+FIND_LIBRARY(Z_LIB libz.so /usr/lib64 NO_DEFAULT_PATH)
+FIND_LIBRARY(UV_LIB libuv.a ../../tools/linux_libuv/lib NO_DEFAULT_PATH)
+FIND_LIBRARY(PTHREAD_LIB libpthread.a /usr/lib64 NO_DEFAULT_PATH)
+FIND_LIBRARY(LUA_LIB liblua.a ../../tools/linux_lua/lib NO_DEFAULT_PATH)
+FIND_LIBRARY(TOLUA_LIB libtolua++.a ../../tools/linux_tolua/lib NO_DEFAULT_PATH)
+FIND_LIBRARY(CURL_LIB libcurl.a ../../tools/libcurl/lib NO_DEFAULT_PATH)
+
+MESSAGE(STATUS "libuv include path " ${UV_INC})
+MESSAGE(STATUS "mysql++ include path " ${MYSQLPP_INC})
+MESSAGE(STATUS "json include path " ${JSON_INC})
+MESSAGE(STATUS "UV_LIB = " ${UV_LIB})
+MESSAGE(STATUS "PTHREAD_LIB = " ${PTHREAD_LIB})
+MESSAGE(STATUS "CMAKE_CXX_FLAGS = " ${CMAKE_CXX_FLAGS})
+
+SET(3PARTY_INC ${MYSQL_INC} ${MYSQLPP_INC} ${UV_INC} ${PROTOBUF_INC} ${JSON_INC} ${CURL_INC} /data/trunk/server_tuning/tools/linux_mysql++/include)
+SET(COMMON_PATH ${PROJECT_SOURCE_DIR}/src/Common)
+SET(BASE_PATH ${PROJECT_SOURCE_DIR}/src/base)
+SET(GEN_PATH ${PROJECT_SOURCE_DIR}/src/gen)
+SET(PROTO_PATH ${PROJECT_SOURCE_DIR}/src/Proto)
+SET(PROTO_IMP_PATH ${PROJECT_SOURCE_DIR}/src/Proto/Imp)
+SET(SHARED_PATH ${PROJECT_SOURCE_DIR}/src/shared)
+SET(LUASCRIPT_PATH ${LUA_INC} ${TOLUA_INC} ${PROJECT_SOURCE_DIR}/src/LuaScript)
+SET(GAMESHARED_PATH ${PROJECT_SOURCE_DIR}/src/GameShared)
+
+FILE(GLOB_RECURSE GEN_HEADER ${GEN_PATH}/*.h)
+FILE(GLOB_RECURSE GEN_SOURCE ${GEN_PATH}/*.cpp)
+FILE(GLOB_RECURSE PROTO_HEADER ${PROTO_IMP_PATH}/proto/*.h)
+FILE(GLOB_RECURSE PROTO_SOURCE ${PROTO_IMP_PATH}/proto/*.cc)
+FILE(GLOB_RECURSE LUASCRIPT_HEADER ${LUASCRIPT_PATH}/*.h)
+FILE(GLOB_RECURSE LUASCRIPT_SOURCE ${LUASCRIPT_PATH}/*.cpp)
+FILE(GLOB_RECURSE GAMESHARED_HEADER ${GAMESHARED_PATH}/*.h)
+FILE(GLOB_RECURSE GAMESHARED_SOURCE ${GAMESHARED_PATH}/*.cpp)
+
+ADD_SUBDIRECTORY(base base)
+ADD_SUBDIRECTORY(shared shared)
+ADD_SUBDIRECTORY(GameShared GameShared)
+ADD_SUBDIRECTORY(CentralServer CentralServer)
+ADD_SUBDIRECTORY(LoginServer LoginServer)
+ADD_SUBDIRECTORY(LoginDataServer LoginDataServer)
+ADD_SUBDIRECTORY(LogicServer LogicServer)
+ADD_SUBDIRECTORY(LogicDataServer LogicDataServer)
+ADD_SUBDIRECTORY(GatewayServer GatewayServer)
+ADD_SUBDIRECTORY(ProxyServer ProxyServer)
+ADD_SUBDIRECTORY(WMatchServer WMatchServer)
+ADD_SUBDIRECTORY(WGateServer WGateServer)
+ADD_SUBDIRECTORY(WGameServer WGameServer)
+
+
+
+
+
+
+
