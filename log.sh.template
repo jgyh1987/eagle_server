@@ -1,0 +1,27 @@
+#!/bin/bash
+PARA=$1
+main()
+{
+    #edif your dirctory
+    cd /home/xuyaolan/log
+    clear
+    Alllog=superserver.log" "dataserver.log" "gateserver.log" "logicserver.log 
+    case $PARA in
+        su)
+        tail --follow=name --retry superserver.log --max-unchanged-stats=3 -n 40 -q
+        ;;
+        db)
+        tail --follow=name --retry dataserver.log --max-unchanged-stats=3 -n 40 -q
+        ;;
+        ga)
+        tail --follow=name --retry gateserver.log --max-unchanged-stats=3 -n 40 -q
+        ;;
+        lo)
+        tail --follow=name --retry logicserver.log --max-unchanged-stats=3 -n 40 -q
+        ;;
+        *)
+        tail --follow=name --retry $Alllog --max-unchanged-stats=3 -n 5 -q
+        ;;
+    esac
+}
+main
