@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\Common\Command.h" />
+    <ClInclude Include="..\..\src\Common\CommonType.h" />
+    <ClInclude Include="..\..\src\Common\EagleError.h" />
+    <ClInclude Include="..\..\src\Common\InnerCommand.h" />
+    <ClInclude Include="..\..\src\Common\LogicDataCommand.h" />
+    <ClInclude Include="..\..\src\Common\LogicGateCommand.h" />
+    <ClInclude Include="..\..\src\Common\LogicLoginCommand.h" />
+    <ClInclude Include="..\..\src\Common\LoginServerCommand.h" />
+    <ClInclude Include="..\..\src\Common\PlayerDataInfo.h" />
+    <ClInclude Include="..\..\src\Common\PlayerInfo.h" />
+    <ClInclude Include="..\..\src\Common\PTCommand.h" />
+    <ClInclude Include="..\..\src\Common\ServerCommand.h" />
+    <ClInclude Include="..\..\src\Common\WorldCommand.h" />
+    <ClInclude Include="..\..\src\GameShared\AIBehaviac.h" />
+    <ClInclude Include="..\..\src\GameShared\AIBehaviacAction.h" />
+    <ClInclude Include="..\..\src\GameShared\AIBehaviacCondition.h" />
+    <ClInclude Include="..\..\src\GameShared\Buff.h" />
+    <ClInclude Include="..\..\src\GameShared\Character.h" />
+    <ClInclude Include="..\..\src\GameShared\CommonChange.h" />
+    <ClInclude Include="..\..\src\GameShared\CommonDrop.h" />
+    <ClInclude Include="..\..\src\GameShared\Counter.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS_AIBehaviac.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS_Bag.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS_Component.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS_Counter.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS_Entity.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS_FightInfo.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS_Mail.h" />
+    <ClInclude Include="..\..\src\GameShared\ECS_System.h" />
+    <ClInclude Include="..\..\src\GameShared\Effect.h" />
+    <ClInclude Include="..\..\src\GameShared\EffectObject.h" />
+    <ClInclude Include="..\..\src\GameShared\GameBaseTask.h" />
+    <ClInclude Include="..\..\src\GameShared\Grid.h" />
+    <ClInclude Include="..\..\src\GameShared\ikcp.h" />
+    <ClInclude Include="..\..\src\GameShared\Item.h" />
+    <ClInclude Include="..\..\src\GameShared\JsonDataLoad.h" />
+    <ClInclude Include="..\..\src\GameShared\KcpPlayer.h" />
+    <ClInclude Include="..\..\src\GameShared\LandmassManager.h" />
+    <ClInclude Include="..\..\src\GameShared\LogicDataManager.h" />
+    <ClInclude Include="..\..\src\GameShared\Map.h" />
+    <ClInclude Include="..\..\src\GameShared\MMOSkill.h" />
+    <ClInclude Include="..\..\src\GameShared\RangeCheck.h" />
+    <ClInclude Include="..\..\src\GameShared\SharedEvent.h" />
+    <ClInclude Include="..\..\src\GameShared\Skill.h" />
+    <ClInclude Include="..\..\src\GameShared\SysLogInfo.h" />
+    <ClInclude Include="..\..\src\GameShared\TransMap.h" />
+    <ClInclude Include="..\..\src\GameShared\WorldObject.h" />
+    <ClInclude Include="..\..\src\gen\ClientMsg.h" />
+    <ClInclude Include="..\..\src\gen\Design.h" />
+    <ClInclude Include="..\..\src\gen\Struct.h" />
+    <ClInclude Include="..\..\src\Proto\Imp\proto\msg_net.pb.h" />
+    <ClInclude Include="..\..\src\Proto\Imp\proto\package_net.pb.h" />
+    <ClInclude Include="..\..\src\Proto\Imp\proto\playerDataSave.pb.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\GameShared\AIBehaviac.cpp" />
+    <ClCompile Include="..\..\src\GameShared\AIBehaviacAction.cpp" />
+    <ClCompile Include="..\..\src\GameShared\AIBehaviacCondition.cpp" />
+    <ClCompile Include="..\..\src\GameShared\Buff.cpp" />
+    <ClCompile Include="..\..\src\GameShared\Character.cpp" />
+    <ClCompile Include="..\..\src\GameShared\CommonChange.cpp" />
+    <ClCompile Include="..\..\src\GameShared\CommonDrop.cpp" />
+    <ClCompile Include="..\..\src\GameShared\Counter.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ECS_AIBehaviac.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ECS_Bag.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ECS_Component.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ECS_Counter.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ECS_Entity.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ECS_FightInfo.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ECS_Mail.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ECS_System.cpp" />
+    <ClCompile Include="..\..\src\GameShared\Effect.cpp" />
+    <ClCompile Include="..\..\src\GameShared\EffectObject.cpp" />
+    <ClCompile Include="..\..\src\GameShared\GameBaseTask.cpp" />
+    <ClCompile Include="..\..\src\GameShared\Grid.cpp" />
+    <ClCompile Include="..\..\src\GameShared\ikcp.cpp" />
+    <ClCompile Include="..\..\src\GameShared\Item.cpp" />
+    <ClCompile Include="..\..\src\GameShared\JsonDataLoad.cpp" />
+    <ClCompile Include="..\..\src\GameShared\KcpPlayer.cpp" />
+    <ClCompile Include="..\..\src\GameShared\LandmassManager.cpp" />
+    <ClCompile Include="..\..\src\GameShared\LogicDataManager.cpp" />
+    <ClCompile Include="..\..\src\GameShared\Map.cpp" />
+    <ClCompile Include="..\..\src\GameShared\MMOSkill.cpp" />
+    <ClCompile Include="..\..\src\GameShared\RangeCheck.cpp" />
+    <ClCompile Include="..\..\src\GameShared\SharedEvent.cpp" />
+    <ClCompile Include="..\..\src\GameShared\Skill.cpp" />
+    <ClCompile Include="..\..\src\GameShared\TransMap.cpp" />
+    <ClCompile Include="..\..\src\GameShared\WorldObject.cpp" />
+    <ClCompile Include="..\..\src\gen\ClientMsg.cpp" />
+    <ClCompile Include="..\..\src\gen\Design.cpp" />
+    <ClCompile Include="..\..\src\gen\Struct.cpp" />
+    <ClCompile Include="..\..\src\Proto\Imp\proto\msg_net.pb.cc" />
+    <ClCompile Include="..\..\src\Proto\Imp\proto\package_net.pb.cc" />
+    <ClCompile Include="..\..\src\Proto\Imp\proto\playerDataSave.pb.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\GameShared\AIBehavior.inl" />
+    <None Include="..\..\src\GameShared\PlayerData.inl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{FEE86B8F-ED32-4386-9AFF-D3E3924A5F0D}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GameShared</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.\..\..\src\Proto\Imp;.\..\..\tools\win_protobuf\include;.\..\..\src\shared;.\..\..\tools\;.\..\..\src\gen;.\..\..\tools\libuv\include;.\..\..\src\Common;.\..\..\src\base</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4996;4099;4146;4005</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>.\..\x64\Debug;.\..\..\tools;.\tools;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ShareLib.lib;lib_json.lib;</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

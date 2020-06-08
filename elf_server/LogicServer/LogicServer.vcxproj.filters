@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="LuaScript">
+      <UniqueIdentifier>{1d4c0a10-301b-46c2-b748-6f1f156debf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaCpp">
+      <UniqueIdentifier>{47e961c8-af0f-420d-a814-ed549ebabbfd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\LogicServer\DBConnectClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\Defs.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicServer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicTask.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicTaskManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\World.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\PlayerManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\GM.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LuaScript\LuaState.cpp">
+      <Filter>LuaScript</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LuaScriptManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogDBConnectClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\OffLinePlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicAction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicCondition.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LuaCpp\LuaInit.cpp">
+      <Filter>LuaCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LuaCpp\LuaScriptLogicPlayer.cpp">
+      <Filter>LuaCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LuaCpp\LuaScriptPollActivity.cpp">
+      <Filter>LuaCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LuaCpp\ScriptFunc.cpp">
+      <Filter>LuaCpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\PollActivityManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicService.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicConnectClient.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\GameServerManager.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicEvent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicPlayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\LogicServer\LogicRole.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\LogicServer\DBConnectClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\Defs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicServer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicTask.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicTaskManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\World.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\PlayerManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\GM.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LuaScript\LuaState.h">
+      <Filter>LuaScript</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LuaScriptManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LuaScript\ScriptProxyBase.h">
+      <Filter>LuaScript</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogDBConnectClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\OffLinePlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicAction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicCondition.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LuaCpp\ActivityLuaInit.h">
+      <Filter>LuaCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LuaCpp\LuaInit.h">
+      <Filter>LuaCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LuaCpp\LuaScriptLogicPlayer.h">
+      <Filter>LuaCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LuaCpp\LuaScriptPollActivity.h">
+      <Filter>LuaCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LuaCpp\ScriptFunc.h">
+      <Filter>LuaCpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\PollActivityManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicService.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicConnectClient.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\GameServerManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicPlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\LogicServer\LogicRole.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LuaScript\ActivityInit.lua">
+      <Filter>LuaScript</Filter>
+    </None>
+    <None Include="..\..\LuaScript\Init.lua">
+      <Filter>LuaScript</Filter>
+    </None>
+    <None Include="..\..\LuaScript\PlayerInit.lua">
+      <Filter>LuaScript</Filter>
+    </None>
+    <None Include="..\..\src\LogicServer\LuaCpp\ActivityLuaInit.pkg">
+      <Filter>LuaCpp</Filter>
+    </None>
+    <None Include="..\..\src\LogicServer\LuaCpp\LuaInit.pkg">
+      <Filter>LuaCpp</Filter>
+    </None>
+    <None Include="..\..\src\LogicServer\LuaCpp\tolua.bat">
+      <Filter>LuaCpp</Filter>
+    </None>
+    <None Include="..\..\src\LogicServer\LuaCpp\tolua.sh">
+      <Filter>LuaCpp</Filter>
+    </None>
+  </ItemGroup>
+</Project>
