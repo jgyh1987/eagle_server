@@ -1,0 +1,16 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!--游戏参数 -->
+<GameParameters>
+	<oddsUnderNumber>100000</oddsUnderNumber><!--所有分数底数-->
+	<petTrainCrit1Gold>60000</petTrainCrit1Gold><!--宠物金币培养小暴击概率-->
+	<petTrainCrit2Gold>100</petTrainCrit2Gold><!--宠物金币培养大暴击概率-->	
+	
+	<!--战斗倒计时时间设置-->
+	<pveCD>30</pveCD>
+	<pvpCD>8</pvpCD>
+	<guideCD>10000</guideCD>
+	<!--初始VIP等级 对应VIP表格中id-->
+	<InitVipLevel>0</InitVipLevel>
+  
+</GameParameters>
