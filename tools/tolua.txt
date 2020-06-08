@@ -1,0 +1,1 @@
+tolua++.exe -n LuaInit -o LuaInit.cpp LuaInit.pkg

@@ -1,0 +1,7 @@
+export PATH=$PATH:/usr/local/mysql/bin:/usr/local/mysql/lib
+
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/local/mysql/include:/usr/local/mysql++/include
+export CPLUS_INCLUDE_PATH=$C_INCLUDE_PATH
+export SPECIAL_MACRO="-D_HAS_ASSERT_CORE_DOWN"
+
+ulimit -c 1000000

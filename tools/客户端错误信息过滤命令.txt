@@ -1,0 +1,1 @@
+cat GatewayServer_201602180238_023634_000.log |grep -e "LOG_ALARM ClientErrorMsg" -A18 > aa.txt
