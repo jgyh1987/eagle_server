@@ -1,0 +1,29 @@
+﻿
+<?xml version="1.0" encoding="UTF-8"?>
+<!--VIP抽奖参数 -->
+<VipChest>
+
+	<!--VIP抽奖开放需要的VIP等级-->
+	<VipChestOpenLevel>5</VipChestOpenLevel>
+	<!--VIP抽奖COST-->
+	<VipChestCost>888</VipChestCost>
+	<!--VIP抽奖赠送-->
+	<VipChestGive>3-2-10000</VipChestGive>
+	<!--VIP抽奖垃圾掉落-->
+	<VipChestNormalLoot>7</VipChestNormalLoot>
+	<!--VIP抽奖今日热  掉落 显示(通用掉落ID-类型-ID-数量)-->
+	<VipChestDayLoot>10001-2-146-1;10002-2-149-1;10003-2-246-1;10004-2-249-1;10005-2-346-1;10006-2-349-1;10007-2-446-1;10008-2-449-1;10009-2-831-1;10010-2-834-1;10011-2-919-1;10012-2-922-1</VipChestDayLoot>
+	<!--VIP抽奖本周热  掉落 显示-->
+	<VipChestWeekLoot>
+		<VipChestWeekLootNode time="2016-2-22 00:00:00" loot="11001-2-152-1" />
+		<VipChestWeekLootNode time="2016-2-29 00:00:00" loot="11002-2-252-1" />
+		<VipChestWeekLootNode time="2016-3-7 00:00:00" loot="11003-2-352-1" />
+		<VipChestWeekLootNode time="2016-3-14 00:00:00" loot="11004-2-452-1" />
+		<VipChestWeekLootNode time="2016-3-21 00:00:00" loot="11005-2-837-1" />
+		<VipChestWeekLootNode time="2016-3-28 00:00:00" loot="11005-2-925-1" />
+	</VipChestWeekLoot>
+	<!--VIP抽奖本周热  掉落比率 万分比-->
+	<VipChestWeekRate>3000</VipChestWeekRate>
+	<!--VIP抽奖次数-->
+	<VipChestCount>6</VipChestCount>
+</VipChest>

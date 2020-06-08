@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1001, 
+    "name": "equip1001", 
+    "tips": "equipDesc1001", 
+    "equipLv": 1, 
+    "equipIcon": "icon_bag_zb_wq", 
+    "equipClass": -1, 
+    "quality": 1, 
+    "attachRateScore": 100
+  }, 
+  {
+    "id": 1002, 
+    "name": "equip1002", 
+    "tips": "equipDesc1002", 
+    "equipLv": 1, 
+    "equipIcon": "icon_bag_zb_st", 
+    "equipClass": -1, 
+    "quality": 1, 
+    "attachRateScore": 100
+  }, 
+  {
+    "id": 1003, 
+    "name": "equip1003", 
+    "tips": "equipDesc1003", 
+    "equipLv": 1, 
+    "equipIcon": "icon_bag_zb_xz", 
+    "equipClass": -1, 
+    "quality": 1, 
+    "attachRateScore": 100
+  }
+]

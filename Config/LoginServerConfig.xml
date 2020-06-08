@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--登陆服务器配置-->
+<Config>
+  <server type="1" name="LESHUAND" url="http://passport.leshu.com/CheckUser.php" gameTag="5" gameSubTag="1" secreat="4g8sBsC3D4BjyJwI"/>
+  <server type="2" name="JIAZIAND" url="http://sg.26cc.com/servercheckhandler.ashx" appId="100000101" gameTag="TXHC" secreat="jiazitest2)!*)@ccjoy" />
+  <server type="3" name="QQ" url="http://ysdktest.qq.com/auth/qq_check_token" appId="1104936059" gameTag="" secreat="i0o7LppGJSpNVGRE" />
+  <server type="4" name="LESHUIOS" url="http://passport.leshu.com/CheckUser.php" gameTag="5" gameSubTag="2" secreat="4g8sBsC3D4BjyJwI"/>
+  <server type="5" name="Six02AND" url="http://sdkshouyou.602.com/user/gameGetUserInfo" gameTag="5" gameSubTag="1" secreat="BDV2GrBaGzdUPgLkNBMtkjdi5F2szxIF" />
+  <server type="6" name="Six02IOS" url="http://sdkshouyou.602.com/user/gameGetUserInfo" gameTag="5" gameSubTag="1" secreat="BDV2GrBaGzdUPgLkNBMtkjdi5F2szxIF" />
+</Config>
+

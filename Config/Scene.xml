@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sceneconfig>
+	<landmass>1</landmass>
+	<scenelist>
+		<scene id="1" />
+		<scene id="5" />
+	</scenelist>
+</sceneconfig>

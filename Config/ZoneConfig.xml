@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--游戏逻辑无关,每个区需要定制-->
+<Config>
+	<Share>
+		<daemon>true</daemon>
+		<ifname>eth0</ifname>
+		<isConsole>1</isConsole>
+		<ConnectCentralServerPort>13100</ConnectCentralServerPort>
+		<ConnectCentralServerIP>127.0.0.1</ConnectCentralServerIP>
+	</Share>
+	
+	<LogicServer>
+		<LoggerLevel>1</LoggerLevel>
+		<CmdQueueMax>102400</CmdQueueMax>
+		<LogicServerTcpPort>13006</LogicServerTcpPort>
+		<LogicServerTcpIP>127.0.0.1</LogicServerTcpIP>
+		<ConnectLogicDataServerPort>13004</ConnectLogicDataServerPort>
+		<ConnectLogicDataServerIP>127.0.0.1</ConnectLogicDataServerIP>
+		<ConnectLogicLogDataServerPort>13005</ConnectLogicLogDataServerPort>
+		<ConnectLogicLogDataServerIP>127.0.0.1</ConnectLogicLogDataServerIP>
+		<ConnectProxyServerPort>13102</ConnectProxyServerPort>
+		<ConnectProxyServerIP>127.0.0.1</ConnectProxyServerIP>
+		<ServerName>LogicServer1</ServerName>
+		<ServerId>1</ServerId>
+    <GameServerId>1</GameServerId>
+		<StratServerTime>2016-01-01 00:00:00</StratServerTime>		
+		<ConfigPath>./Config/</ConfigPath>
+		<LogPath>./log/LogicServer/</LogPath>
+		<LuaInit>./LuaScript/</LuaInit>
+		<ServerParametersPath>./Config/GameServerParameters.xml</ServerParametersPath>
+	</LogicServer>
+	
+	<LogicDataServer>
+		<LoggerLevel>1</LoggerLevel>
+		<LogPath>./log/LogicDataServer/</LogPath>
+		<CmdQueueMax>102400</CmdQueueMax>
+		<ServerName>LogicDataServer1</ServerName>
+		<ServerId>1</ServerId>
+		<DataLogDBName>rts_logic_log</DataLogDBName>
+		<DataDBName>rts_logic</DataDBName>
+		<DataDBUser>root</DataDBUser>
+		<DataDBPasswd>0hOpPCWhvLfX00xe</DataDBPasswd>
+		<DataDBIP>rm-wz95406fv94bnkk74wo.mysql.rds.aliyuncs.com</DataDBIP>
+		<DataDBPort>3306</DataDBPort>
+		<LogicDataServerTcpPort>13004</LogicDataServerTcpPort>
+		<LogicLogDataServerTcpPort>13005</LogicLogDataServerTcpPort>
+		<ConnectProxyServerPort>13102</ConnectProxyServerPort>
+		<ConnectProxyServerIP>127.0.0.1</ConnectProxyServerIP>
+		<GMIsOpen>1</GMIsOpen>
+	</LogicDataServer>
+
+	<GateServer>
+		<LoggerLevel>2</LoggerLevel>
+		<CmdQueueMax>1024</CmdQueueMax>
+		<ServerName>GateServer1</ServerName>
+		<ServerId>1</ServerId>
+    <GameServerId>1</GameServerId>
+		<PlatformId>3</PlatformId>
+		<GateServerTcpPort>13007</GateServerTcpPort>
+		<GateServerTcpIP>127.0.0.1</GateServerTcpIP>
+		<GateServerUdpPort>13008</GateServerUdpPort>
+		<ConnectLogicServerPort>13006</ConnectLogicServerPort>
+		<ConnectLogicServerIP>127.0.0.1</ConnectLogicServerIP>
+		<ConnectLoginServerPort>13001</ConnectLoginServerPort>
+		<ConnectLoginServerIP>127.0.0.1</ConnectLoginServerIP>
+		<LogPath>./log/GatewayServer/</LogPath>
+    <ConfigPath>./Config/</ConfigPath>
+		<ServerParametersPath>./Config/GameServerParameters.xml</ServerParametersPath>
+		<GMPTIPPPORT>192.168.1.215:8581</GMPTIPPPORT>
+	</GateServer>
+	
+	<LoginServer>
+		<LoggerLevel>1</LoggerLevel>
+		<LogPath>./log/LoginServer/</LogPath>
+		<CmdQueueMax>102400</CmdQueueMax>
+		<ServerName>LoginServer1</ServerName>
+		<ServerId>1</ServerId>
+		<ServerListRefTime>300</ServerListRefTime>
+		<LoginServerTcpPort>13001</LoginServerTcpPort>
+		<LoginServerTcpIP>127.0.0.1</LoginServerTcpIP>
+		<LoginClientUdpPort>13002</LoginClientUdpPort>
+		<LoginClientTcpPort>13003</LoginClientTcpPort>
+		<ConnectLoginDataServerPort>13000</ConnectLoginDataServerPort>
+		<ConnectLoginDataServerIP>127.0.0.1</ConnectLoginDataServerIP>
+		<ServerListConfigPath>./Config/ServerList.xml</ServerListConfigPath>
+	</LoginServer>
+	
+	<LoginDataServer>
+		<LoggerLevel>1</LoggerLevel>
+		<LogPath>./log/LoginDataServer/</LogPath>
+		<CmdQueueMax>102400</CmdQueueMax>
+		<ServerName>LoginDataServer1</ServerName>
+		<ServerId>1</ServerId>
+		<DataLogDBName>rts_login_log</DataLogDBName>
+		<DataDBName>rts_login</DataDBName>
+		<DataDBUser>root</DataDBUser>
+		<DataDBPasswd>0hOpPCWhvLfX00xe</DataDBPasswd>
+		<DataDBIP>rm-wz95406fv94bnkk74wo.mysql.rds.aliyuncs.com</DataDBIP>
+		<DataDBPort>3306</DataDBPort>
+		<LoginDataServerTcpPort>13000</LoginDataServerTcpPort>
+		<LoginServerConfig>./Config/LoginServerConfig.xml</LoginServerConfig>
+	</LoginDataServer>
+	
+	<WMatchServer>
+		<LoggerLevel>1</LoggerLevel>
+		<LogPath>./log/WMatchServer/</LogPath>
+		<CmdQueueMax>1024</CmdQueueMax>
+		<ServerName>WMatchServer1</ServerName>
+		<ServerId>1</ServerId>
+    <WMatchServerTcpPort>13101</WMatchServerTcpPort>
+    <WMatchServerTcpIP>127.0.0.1</WMatchServerTcpIP>
+	<ServerParametersPath>./Config/WorldGameServerParameters.xml</ServerParametersPath>
+		<ConfigPath>./Config/</ConfigPath>
+	</WMatchServer>
+
+  <WGameServer>
+    <LoggerLevel>1</LoggerLevel>
+	<StartDungeon>1</StartDungeon>
+    <LogPath>./log/WGameServer/</LogPath>
+    <CmdQueueMax>102400</CmdQueueMax>
+    <ServerName>WGameServer1</ServerName>
+    <ServerId>1</ServerId>
+	<GameServerId>1</GameServerId>
+	<UseDungeon>1</UseDungeon>
+    <WGameServerTcpIP>127.0.0.1</WGameServerTcpIP>
+    <WGameServerTcpPort>13201</WGameServerTcpPort>
+    <ConfigPath>./Config/</ConfigPath>
+    <LuaInit>./LuaScript/</LuaInit>
+    <ServerParametersPath>./Config/WorldGameServerParameters.xml</ServerParametersPath>
+	<SceneManagerPath>./Config/Scene.xml</SceneManagerPath>
+	<SceneIds>1;3</SceneIds>
+  </WGameServer>
+
+  <WGateServer>
+    <LoggerLevel>1</LoggerLevel>
+    <LogPath>./log/WGateServer/</LogPath>
+    <CmdQueueMax>102400</CmdQueueMax>
+    <ServerName>WGateServer1</ServerName>
+    <ServerId>1</ServerId>
+	<GameServerId>0</GameServerId>
+    <WGateServerTcpIP>127.0.0.1</WGateServerTcpIP>
+    <WGateServerTcpPort>13301</WGateServerTcpPort>
+	<WGateServerUdpPort>13302</WGateServerUdpPort>
+    <ConfigPath>./Config/</ConfigPath>
+  </WGateServer>
+	
+	<CentralServer>
+		<LoggerLevel>1</LoggerLevel>
+		<ServerName>CentralServer</ServerName>
+		<ServerId>1</ServerId>
+		<LogPath>./log/CentralServer/</LogPath>
+		<CmdQueueMax>102400</CmdQueueMax>
+    <CentralServerTcpPort>13100</CentralServerTcpPort>
+    <TransMapConfig>./Config/CentralServer.xml</TransMapConfig>
+	</CentralServer>
+  
+   <ProxyServer>
+		<LoggerLevel>1</LoggerLevel>
+		<ServerName>ProxyServer1</ServerName>
+		<ServerId>1</ServerId>
+		<LogPath>./log/ProxyServer/</LogPath>
+		<CmdQueueMax>102400</CmdQueueMax>
+		<ProxyServerTcpPort>13102</ProxyServerTcpPort>
+     <ProxyServerTcpIp>127.0.0.1</ProxyServerTcpIp>
+	</ProxyServer>
+
+</Config>
+

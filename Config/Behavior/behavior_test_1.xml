@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--EXPORTED BY TOOL, DON'T MODIFY IT!-->
+<!--Source File: behavior_test_1.xml-->
+<behavior name="behavior_test_1" agenttype="FristAgent" version="5">
+  <node class="Sequence" id="0">
+    <node class="Sequence" id="1">
+      <node class="True" id="4" />
+      <node class="False" id="7" />
+    </node>
+	<node class="Selector" id="2">
+      <node class="True" id="5" />
+      <node class="False" id="8" />
+    </node>
+	<node class="Random" id="10" Randoms="100,50,300">
+      <node class="Wander" id="11" Radius="15"/>
+      <node class="Wander" id="12" Radius="5"/>
+	  <node class="Idle" id="13" Delay="2000"/>
+    </node>
+    <node class="Parallel" id="3" ExitPolicy="EXIT_NONE" FailurePolicy="FAIL_ON_ALL" SuccessPolicy="SUCCEED_ON_ALL">
+      <node class="True" id="6" />
+      <node class="False" id="9" />
+    </node>
+  </node>
+</behavior>

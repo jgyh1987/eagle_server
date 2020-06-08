@@ -1,0 +1,21 @@
+
+<?xml version="1.0" encoding="UTF-8"?>  
+<!--游戏参数 -->
+<GameParameters>
+
+	<!--服务器隔日更新时间 相对于凌晨的秒数-->
+	<ServerUpdateDelay>32400</ServerUpdateDelay>
+	
+	<!--初始体力-->
+	<InitEnergy>55</InitEnergy>
+	<!--体力恢复间隔 秒-->
+	<EnergyRecoveryInterval>180</EnergyRecoveryInterval>
+	<!--间隔恢复体力-->
+	<IntervalEnergyRecovery>1</IntervalEnergyRecovery>
+	<!--初始金币-->
+	<InitGold>100000</InitGold>
+	
+	<TestUTF8>阿斯蒂芬阀手动阀</TestUTF8>
+	
+
+</GameParameters>

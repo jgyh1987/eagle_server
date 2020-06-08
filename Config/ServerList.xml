@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<serverconfig>
+	<!-- servertype 标识需要加载的游戏服务器类型 -->
+	<servertype>1;2</servertype>
+	<serverlist>
+		<!-- id 服务器ID 连接到登录服务器的服务器标识，在游戏服务器端需设置相同id -->
+		<!-- type 服务器类型（1 安卓， 2 IOS）-->
+		<activelist id="1" type="1" title="推荐" serverindex="1" servertitle="电信1服" servername="eagle" />
+		<activelist id="2" type="1" title="推荐" serverindex="2" servertitle="电信2服" servername="eagleWIN" />
+		<activelist id="3" type="1" title="推荐" serverindex="3" servertitle="电信3服" servername="eagleVT" />
+		<activelist id="4" type="1" title="推荐" serverindex="4" servertitle="电信4服" servername="waiwang" />
+		<activelist id="5" type="1" title="推荐" serverindex="5" servertitle="电信5服" servername="zhangdounan" />
+		<activelist id="6" type="1" title="推荐" serverindex="6" servertitle="电信6服" servername="release" />
+		<activelist id="7" type="1" title="推荐" serverindex="7" servertitle="电信7服" servername="jianghao" />
+		<activelist id="8" type="1" title="推荐" serverindex="8" servertitle="电信8服" servername="fangqichen" />
+		<activelist id="9" type="1" title="推荐" serverindex="9" servertitle="电信9服" servername="gaoshiming" />
+		<activelist id="10" type="1" title="不推荐" serverindex="10" servertitle="电信10服" servername="雪莉露诺姆5" />
+		<activelist id="11" type="1" title="不推荐" serverindex="11" servertitle="电信11服" servername="红月卡莲6" />
+		<activelist id="12" type="1" title="不推荐" serverindex="12" servertitle="电信12服" servername="雪莉露诺姆6" />
+		<activelist id="13" type="1" title="不推荐" serverindex="13" servertitle="电信13服" servername="红月卡莲7" />
+		<activelist id="14" type="1" title="不推荐" serverindex="14" servertitle="电信14服" servername="雪莉露诺姆7" />
+		<activelist id="15" type="1" title="不推荐" serverindex="15" servertitle="电信15服" servername="红月卡莲8" />
+		<activelist id="16" type="1" title="不推荐" serverindex="16" servertitle="电信16服" servername="雪莉露诺姆8" />
+		<activelist id="17" type="1" title="不推荐" serverindex="17" servertitle="电信17服" servername="红月卡莲9" />
+		<activelist id="18" type="1" title="不推荐" serverindex="18" servertitle="电信18服" servername="雪莉露诺姆9" />
+		<activelist id="19" type="1" title="不推荐" serverindex="19" servertitle="电信19服" servername="红月卡莲10" />
+		<activelist id="20" type="1" title="不推荐" serverindex="20" servertitle="电信20服" servername="雪莉露诺姆10" />
+		<activelist id="21" type="1" title="不推荐" serverindex="21" servertitle="电信21服" servername="鲁鲁修1" />
+	</serverlist>
+</serverconfig>

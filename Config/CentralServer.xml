@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--central server trans map-->
+<Config>
+	<ServerTypeMax typemax="30" />
+	<ServerTypeList>
+	<activelist servertype="5" need_servertype="24;" />
+	<activelist servertype="21" need_servertype="21;22;" />
+    <activelist servertype="23" need_servertype="24" />
+	<activelist servertype="24" need_servertype="24" />
+	</ServerTypeList>
+</Config>
+

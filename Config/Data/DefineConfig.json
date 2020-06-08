@@ -1,0 +1,9 @@
+{
+  "coupon": 800, 
+  "RoleGrid": 14, 
+  "buyRoleGridPrice": 100, 
+  "bagInitialNum": 32, 
+  "bagMaxNum": 120, 
+  "bagCost": 50, 
+  "bagAddNum": 4
+}

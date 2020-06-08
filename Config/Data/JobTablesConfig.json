@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1, 
+    "name": "jobName1", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 0, 
+    "open": true
+  }, 
+  {
+    "id": 2, 
+    "name": "jobName2", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 1, 
+    "open": true
+  }, 
+  {
+    "id": 110, 
+    "name": "jobName110", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 0, 
+    "open": true
+  }, 
+  {
+    "id": 120, 
+    "name": "jobName120", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 1, 
+    "open": true
+  }, 
+  {
+    "id": 210, 
+    "name": "jobName210", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 0, 
+    "open": true
+  }, 
+  {
+    "id": 220, 
+    "name": "jobName220", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 1, 
+    "open": true
+  }, 
+  {
+    "id": 310, 
+    "name": "jobName310", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 0, 
+    "open": true
+  }, 
+  {
+    "id": 320, 
+    "name": "jobName320", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 1, 
+    "open": false
+  }, 
+  {
+    "id": 410, 
+    "name": "jobName410", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 0, 
+    "open": false
+  }, 
+  {
+    "id": 420, 
+    "name": "jobName420", 
+    "jobAttribute": 0, 
+    "jobType": false, 
+    "sex": 1, 
+    "open": false
+  }
+]

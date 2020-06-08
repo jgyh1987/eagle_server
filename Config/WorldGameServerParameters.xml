@@ -1,0 +1,32 @@
+﻿
+<?xml version="1.0" encoding="UTF-8"?>
+<!--游戏参数 -->
+<GameParameters>
+	<!--跨服服务器大厅同步显示玩家数量-->
+	<WorldSyncPlayerCount>50</WorldSyncPlayerCount>
+	<!--跨服战斗服务器战斗副本数量上限-->
+	<FightRoomMaxCount>1000</FightRoomMaxCount>
+	<!--跨服拉取房间列表间隔-->
+	<GetRoomTimeInterval>3</GetRoomTimeInterval>
+	<!--跨服踢房主时间-->
+	<TickRoomCaptainTime>30</TickRoomCaptainTime>
+	<!--跨服PVE推荐玩家数量-->
+	<WorldPveConfirmPlayerCount>5</WorldPveConfirmPlayerCount>
+	
+	<!--组合技-->
+	<!--组合技能量上限-->
+	<GroupSkillEnergy>1000</GroupSkillEnergy>
+	<!--组合技-->
+	
+	<!--战斗公式-->
+	<!--防御减伤系数def/(x+def)中的x-->
+	<BattleFormulaReduceCount>1000</BattleFormulaReduceCount>
+	<!--基础防御函数i*def/(t*def+u)中的i（修炼上限）-->
+	<BattleFormulaExerciseCount>50</BattleFormulaExerciseCount>
+	<!--基础防御函数i*def/(t*def+u)中的t（需要除10000）-->
+	<BattleFormulaBaseDefCount1>7500</BattleFormulaBaseDefCount1>
+	<!--基础防御函数i*def/(t*def+u)中的u-->
+	<BattleFormulaBaseDefCount2>255</BattleFormulaBaseDefCount2>
+	<!--战斗公式-->
+
+</GameParameters>

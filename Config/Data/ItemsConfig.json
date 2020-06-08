@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1001001, 
+    "subType": 1, 
+    "useType": false, 
+    "useLv": 1, 
+    "salePrice": {
+      "type": 3, 
+      "id": 1002, 
+      "count": 10001
+    }, 
+    "overlay": 999, 
+    "class": 0, 
+    "bind": 1, 
+    "dropGroup": 0, 
+    "acType": 1
+  }, 
+  {
+    "id": 1001002, 
+    "subType": 1, 
+    "useType": false, 
+    "useLv": 2, 
+    "salePrice": {
+      "type": 3, 
+      "id": 1002, 
+      "count": 10002
+    }, 
+    "overlay": 999, 
+    "class": 0, 
+    "bind": 2, 
+    "dropGroup": 0, 
+    "acType": 1
+  }, 
+  {
+    "id": 1001003, 
+    "subType": 1, 
+    "useType": false, 
+    "useLv": 3, 
+    "salePrice": {
+      "type": 3, 
+      "id": 1002, 
+      "count": 10003
+    }, 
+    "overlay": 999, 
+    "class": 0, 
+    "bind": 3, 
+    "dropGroup": 0, 
+    "acType": 1
+  }, 
+  {
+    "id": 1001004, 
+    "subType": 1, 
+    "useType": false, 
+    "useLv": 4, 
+    "salePrice": {
+      "type": 3, 
+      "id": 1002, 
+      "count": 10004
+    }, 
+    "overlay": 999, 
+    "class": 0, 
+    "bind": 1, 
+    "dropGroup": 0, 
+    "acType": 1
+  }, 
+  {
+    "id": 1001005, 
+    "subType": 2, 
+    "useType": false, 
+    "useLv": 5, 
+    "salePrice": {
+      "type": 3, 
+      "id": 1002, 
+      "count": 10005
+    }, 
+    "overlay": 999, 
+    "class": 0, 
+    "bind": 2, 
+    "dropGroup": 0, 
+    "acType": 1
+  }, 
+  {
+    "id": 1001006, 
+    "subType": 3, 
+    "useType": false, 
+    "useLv": 6, 
+    "salePrice": {
+      "type": 3, 
+      "id": 1002, 
+      "count": 10006
+    }, 
+    "overlay": 999, 
+    "class": 0, 
+    "bind": 3, 
+    "dropGroup": 0, 
+    "acType": 1
+  }
+]

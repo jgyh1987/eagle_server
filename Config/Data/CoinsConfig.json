@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1, 
+    "name": "金币", 
+    "description": "玩家金币"
+  }, 
+  {
+    "id": 2, 
+    "name": "好评", 
+    "description": "玩家好评"
+  }, 
+  {
+    "id": 3, 
+    "name": "加速营收概率", 
+    "description": "店铺装修中加速营收概率"
+  }, 
+  {
+    "id": 4, 
+    "name": "星级", 
+    "description": "玩家星级"
+  }, 
+  {
+    "id": 5, 
+    "name": "离线收益时间", 
+    "description": "店铺装修中离线收益时间"
+  }, 
+  {
+    "id": 6, 
+    "name": "加速营收次数", 
+    "description": "用于加速营收"
+  }, 
+  {
+    "id": 7, 
+    "name": "宣传次数", 
+    "description": "用于店庆宣传"
+  }, 
+  {
+    "id": 8, 
+    "name": "店庆经验", 
+    "description": "用于增长店庆经验"
+  }, 
+  {
+    "id": 9, 
+    "name": "钻石", 
+    "description": "玩家钻石数量"
+  }
+]
